@@ -1,0 +1,18 @@
+PAREI NO VIDEO EM 1 Hora 8 Minutos e 57 Segundos
+
+1 - Instalar ngx-bootstrap.
+
+2 - Instalar CDN bootstrap.
+
+3- Instalar CDN FontAwesome.
+
+4- Instalar ngx-toastr e Importar:
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+Para o app.module.
+
+5-  no angular.json acrescentar após "styles": "src/styles/css" o que segue...:
+
+("node_modules/ngx-toastr/toastr.css").
