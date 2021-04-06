@@ -1,10 +1,11 @@
-PAREI NO VIDEO EM 1 Hora 8 Minutos e 57 Segundos
+INSTALAÇÕES E OBSERVAÇÕES:
+=================================================================================
 
 1 - Instalar ngx-bootstrap.
 
-2 - Instalar CDN bootstrap.
+2 - Instalar CDN bootstrap e referenciar no Index.html.
 
-3- Instalar CDN FontAwesome.
+3- Instalar CDN FontAwesome e referenciar no Index.html.
 
 4- Instalar ngx-toastr e Importar:
 
