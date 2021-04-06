@@ -4,11 +4,14 @@
 /dist
 /tmp
 /out-tsc
+.Lembretes.txt
 # Only exists if Bazel was run
 /bazel-out
+.Lembretes.txt
 
 # dependencies
 /node_modules
+.Lembretes.txt
 
 # profiling files
 chrome-profiler-events*.json
@@ -22,6 +25,7 @@ speed-measure-plugin*.json
 *.launch
 .settings/
 *.sublime-workspace
+.Lembretes.txt
 
 # IDE - VSCode
 .vscode/*
@@ -30,6 +34,7 @@ speed-measure-plugin*.json
 !.vscode/launch.json
 !.vscode/extensions.json
 .history/*
+.Lembretes.txt
 
 # misc
 /.sass-cache
@@ -40,7 +45,9 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.Lembretes.txt
 
 # System Files
 .DS_Store
 Thumbs.db
+.Lembretes.txt
