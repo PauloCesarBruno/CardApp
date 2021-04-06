@@ -3,7 +3,7 @@
     <input type="hidden" name="cataoDetalheId"
     [value]="service.formData.cataoDetalheId"/>
     <div class="form-group">
-        <label>TITULAR DO CARTÃO</label>
+        <label><strong>TITULAR DO CARTÃO</strong></label>
         <input class="form-control form-control-lg" placeholder="Nome Completo 35 Dígitos"
         name="nome" #nome="ngModel" [(ngModel)]="service.formData.nome"
         required  maxlength="35"[class.invalid]="nome.invalid && nome.touched">
@@ -11,7 +11,7 @@
     </div>
 
     <div class="form-group">
-        <label>NÚMERO DO CARTÃO</label>
+        <label><strong>NÚMERO DO CARTÃO</strong></label>
         <input class="form-control form-control-lg" placeholder="Nº Cartão 16 Dígitos"
         name="numeroCartao" #numeroCartao="ngModel" [(ngModel)]="service.formData.numeroCartao"
         required maxlength="16" minlength="16" [class.invalid]="numeroCartao.invalid && numeroCartao.touched">
@@ -20,7 +20,7 @@
 
     <div class="form-row">    
         <div class="form-group col-md-7">
-            <label>CÓDIGO DE SEGURANÇA</label>
+            <label><strong>CÓDIGO DE SEGURANÇA</strong></label>
             <input type="password" class="form-control form-control-lg" placeholder="Cód. 3 Digitos"
             name="codigoSeguranca" #codigoSeguranca="ngModel" [(ngModel)]="service.formData.codigoSeguranca"
             required maxlength="3" minlength="3" [class.invalid]="codigoSeguranca.invalid &&codigoSeguranca.touched"> 
@@ -28,7 +28,7 @@
         </div>
 
         <div class="form-group col-md-5">
-            <label>VALIDADE DO CARTÃO</label>
+            <label><strong>VALIDADE DO CARTÃO</strong></label>
             <input class="form-control form-control-lg" placeholder="MM/AA"
             name="dataExpiracao" #dataExpiracao="ngModel" [(ngModel)]="service.formData.dataExpiracao"
             required maxlength="5" minlength="5" [class.invalid]="dataExpiracao.invalid && dataExpiracao.touched">
@@ -37,6 +37,6 @@
     </div>
     <hr/>
     <div class="form-group">
-        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid"> <i class="class fas fa-database"></i> ENVIAR</button>
+        <button id="cor" class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid"> <i class="class fas fa-database"></i> ENVIAR</button>
     </div>
 </form>

@@ -9,11 +9,16 @@ body {
 
 .form-group input {
     font-weight: 500;
+    border-color: rgb(54, 6, 228);
 }
 
 .form-group input::placeholder {
     color: #c0bdbd;
     font-weight: 300;
+}
+
+#cor {
+    border-color: rgb(131, 31, 0);
 }
 
 thead th{
