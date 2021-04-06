@@ -1,15 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-    background-color:rgb(218, 215, 214);
-}
-
 .form-group label {
     color: gray;
 }
 
 .form-group input {
     font-weight: 500;
-    border-color: rgb(54, 6, 228);
+    /*border-color: rgb(135, 121, 184);*/
 }
 
 .form-group input::placeholder {
@@ -18,7 +14,7 @@ body {
 }
 
 #cor {
-    border-color: rgb(131, 31, 0);
+    border-color: rgb(26, 126, 35);
 }
 
 thead th{
@@ -29,6 +25,16 @@ table tbody tr:hover {
     background-color: #fffbf2;
     cursor: pointer;
 }
+
+/*Para Mudar a cor do Icone - FontAwesome de acordo com validação*/
+.green-icon{
+   color: #28a745; 
+}
+
+/*Para Mudar a cor do Icone - FontAwesome de acordo com validação*/
+.red-icon{
+    color: #dc3545; 
+ }
 
 /*Para Invalidar Controles*/
 input.invalid {

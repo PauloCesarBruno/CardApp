@@ -2,41 +2,85 @@
 <form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">    
     <input type="hidden" name="cataoDetalheId"
     [value]="service.formData.cataoDetalheId"/>
-    <div class="form-group">
-        <label><strong>TITULAR DO CARTÃO</strong></label>
-        <input class="form-control form-control-lg" placeholder="Nome Completo 35 Dígitos"
-        name="nome" #nome="ngModel" [(ngModel)]="service.formData.nome"
-        required  maxlength="35"[class.invalid]="nome.invalid && nome.touched">
-        <!--Ligado ao CSS para validar  o Input-Border-->
-    </div>
-
-    <div class="form-group">
-        <label><strong>NÚMERO DO CARTÃO</strong></label>
-        <input class="form-control form-control-lg" placeholder="Nº Cartão 16 Dígitos"
-        name="numeroCartao" #numeroCartao="ngModel" [(ngModel)]="service.formData.numeroCartao"
-        required maxlength="16" minlength="16" [class.invalid]="numeroCartao.invalid && numeroCartao.touched">
-        <!--Ligado ao CSS para validar  o Input-Border-->
-    </div>
-
-    <div class="form-row">    
-        <div class="form-group col-md-7">
-            <label><strong>CÓDIGO DE SEGURANÇA</strong></label>
-            <input type="password" class="form-control form-control-lg" placeholder="Cód. 3 Digitos"
-            name="codigoSeguranca" #codigoSeguranca="ngModel" [(ngModel)]="service.formData.codigoSeguranca"
-            required maxlength="3" minlength="3" [class.invalid]="codigoSeguranca.invalid &&codigoSeguranca.touched"> 
-            <!--Ligado ao CSS para validar  o Input-Border-->
+    
+    <div class="container">
+        <div class="form-group">
+            <label><strong>TITULAR DO CARTÃO</strong></label>
+            <div class="input-group">            
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-whit">
+                        <i class="fas fa-user-circle" 
+                        [class.red-icon]="nome.invalid && nome.touched"
+                        [class.green-icon]="nome.valid && nome.touched"></i>
+                    </div>
+                </div>  
+                <input type="texte" class="form-control" placeholder="Nome Completo 35 Dígitos"
+                name="nome" #nome="ngModel" [(ngModel)]="service.formData.nome"
+                required  maxlength="35"[class.invalid]="nome.invalid && nome.touched">
+                <!--Ligado ao CSS para validar  o Input-Border-->            
+            </div>
         </div>
-
-        <div class="form-group col-md-5">
-            <label><strong>VALIDADE DO CARTÃO</strong></label>
-            <input class="form-control form-control-lg" placeholder="MM/AA"
-            name="dataExpiracao" #dataExpiracao="ngModel" [(ngModel)]="service.formData.dataExpiracao"
-            required maxlength="5" minlength="5" [class.invalid]="dataExpiracao.invalid && dataExpiracao.touched">
-            <!--Ligado ao CSS para validar  o Input-Border-->
+        
+        <br/>
+        
+        <div class="form-group">
+            <label><strong>NÚMERO DO CARTÃO</strong></label>
+            <div class="input-group">   
+                <div class="input-group-prepend">
+                    <div class="input-group-text bg-whit">
+                        <i class="fas fa-credit-card"
+                        [class.red-icon]="numeroCartao.invalid && numeroCartao.touched"
+                        [class.green-icon]="numeroCartao.valid && numeroCartao.touched"></i>
+                    </div>
+                </div>    
+                <input type="text" class="form-control" placeholder="Nº Cartão 16 Dígitos"
+                name="numeroCartao" #numeroCartao="ngModel" [(ngModel)]="service.formData.numeroCartao"
+                required maxlength="16" minlength="16" [class.invalid]="numeroCartao.invalid && numeroCartao.touched">
+                <!--Ligado ao CSS para validar  o Input-Border-->
+            </div>
+        </div> 
+        
+        <br/>
+        
+        <div class="row">          
+            <div class="form-group col-md-7">
+                <label><strong>VALIDADE DO CARTÃO</strong></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-whit">
+                            <i class="fas fa-calendar-alt"
+                            [class.red-icon]="dataExpiracao.invalid && dataExpiracao.touched"
+                            [class.green-icon]="dataExpiracao.valid && dataExpiracao.touched"></i>
+                        </div>
+                    </div> 
+                    <input class="form-control" placeholder="MM/AA"
+                    name="dataExpiracao" #dataExpiracao="ngModel" [(ngModel)]="service.formData.dataExpiracao"
+                    required maxlength="5" minlength="5" [class.invalid]="dataExpiracao.invalid && dataExpiracao.touched">
+                    <!--Ligado ao CSS para validar  o Input-Border-->
+                </div>
+            </div>
+            
+            <div class="form-group col-md-5">
+                <label><strong>CÓD. SEGURANÇA</strong></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text bg-whit">
+                            <i class="fas fa-key"
+                            [class.red-icon]="codigoSeguranca.invalid && codigoSeguranca.touched"
+                            [class.green-icon]="codigoSeguranca.valid && codigoSeguranca.touched"></i>
+                        </div>
+                    </div> 
+                    <input type="text" class="form-control" placeholder="Cód. 3 Digitos"
+                    name="codigoSeguranca" #codigoSeguranca="ngModel" [(ngModel)]="service.formData.codigoSeguranca"
+                    required maxlength="3" minlength="3" [class.invalid]="codigoSeguranca.invalid &&codigoSeguranca.touched"> 
+                    <!--Ligado ao CSS para validar  o Input-Border-->
+                </div>
+            </div>
         </div>
-    </div>
-    <hr/>
-    <div class="form-group">
-        <button id="cor" class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid"> <i class="class fas fa-database"></i> ENVIAR</button>
+        
+        <hr/>
+        <div class="form-group">
+            <button id="cor" class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="form.invalid"> <i class="class fas fa-database"></i> ENVIAR</button>
+        </div>
     </div>
 </form>
