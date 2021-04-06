@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 export class CardDetalheService {
 
   constructor(private http: HttpClient) { }
+  // localhost Publicado no meu IIS
   readonly baseURL = 'http://192.168.1.146:5900/api/CardDetail';
   formData: CardDetalhe = new CardDetalhe();
   list: CardDetalhe[];
