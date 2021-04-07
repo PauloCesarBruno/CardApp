@@ -9,13 +9,16 @@ import { AppComponent } from './app.component';
 import { CardDetalhesComponent } from './card-detalhes/card-detalhes.component';
 import { CardDetalheFormComponent } from './card-detalhes/card-detalhe-form/card-detalhe-form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CardDetalhesComponent,
-    CardDetalheFormComponent
-  ],
+    CardDetalheFormComponent,
+    FooterComponent,
+   ],
   imports: [
     BrowserModule,
     FormsModule, // Importado
