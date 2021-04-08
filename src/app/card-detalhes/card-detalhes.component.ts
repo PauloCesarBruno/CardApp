@@ -15,7 +15,7 @@ export class CardDetalhesComponent implements OnInit {
               private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.service.refreshList();
+    this.service.refreshList(); // Esse método está em Serviços e serve para Atualizar o Grid.
   }
 
   // tslint:disable-next-line: typedef
@@ -31,7 +31,7 @@ export class CardDetalhesComponent implements OnInit {
     // tslint:disable-next-line: deprecation
     .subscribe(
       res => {
-        this.service.refreshList();
+        this.service.refreshList(); // Esse método está em Serviços e serve para Atualizar o Grid.
         this.toastr.error('Deletado com Sucesso !', 'Registro Deletado.');
       },
       // tslint:disable-next-line: semicolon

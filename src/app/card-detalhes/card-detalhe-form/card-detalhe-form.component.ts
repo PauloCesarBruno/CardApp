@@ -22,11 +22,11 @@ export class CardDetalheFormComponent implements OnInit {
   onSubmit(form: NgForm){
     // tslint:disable-next-line: curly
     // tslint:disable-next-line: triple-equals
-    if (this.service.formData.cataoDetalheId == 0) {
-    this.inserirGravacao(form);
+    if (this.service.formData.cataoDetalheId == 0) { // Se não Houver nada Gravar, se houver Alterar
+    this.inserirGravacao(form); // Gravar
     }
     else {
-    this.alterarGravacao(form);
+    this.alterarGravacao(form); // Alterar
     }
   }
 
@@ -36,8 +36,8 @@ export class CardDetalheFormComponent implements OnInit {
      // tslint:disable-next-line: deprecation
      this.service.postCardDetalhe().subscribe (
       res => {
-        this.resetForm(form);
-        this.service.refreshList();
+        this.resetForm(form); // Método Criado Abaixo para zerar o formulário para inserssão de novos itens
+        this.service.refreshList(); // Método Criado em Serviços para Atualizar Grid
         this.toastr.success('Inserico com Sucesso !', 'Novo Registro');
       },
       err => { console.log (err); }
@@ -49,8 +49,8 @@ export class CardDetalheFormComponent implements OnInit {
      // tslint:disable-next-line: deprecation
      this.service.putCardDetalhe().subscribe (
       res => {
-        this.resetForm(form);
-        this.service.refreshList();
+        this.resetForm(form); // Método Criado Abaixo para zerar o formulário para inserssão de novos itens
+        this.service.refreshList(); // Método Criado em Serviços para Atualizar Grid
         this.toastr.info('Alterado com Sucesso !', 'Alteração de Registro');
       },
       err => { console.log (err); }
