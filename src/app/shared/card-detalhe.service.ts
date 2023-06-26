@@ -9,7 +9,7 @@ export class CardDetalheService {
 
   constructor(private http: HttpClient) { }
   // localhost Publicado no meu IIS
-  readonly baseURL = 'http://192.168.1.146:5100/api/CardDetail';
+  readonly baseURL = 'http://192.168.0.13:5100/api/CardDetail';
   formData: CardDetalhe = new CardDetalhe(); // o formData é o objeto da classe CardDetalhe Instanciada
   list: CardDetalhe[]; // list é uma lista da classe CardDetalhe Instanciada
 
