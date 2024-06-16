@@ -9,7 +9,7 @@ export class CardDetalheService {
   constructor(private http: HttpClient) { }
   // localhost Publicado no meu IIS
   // readonly baseURL = 'http://192.168.0.10:5100/api/CardDetail';
-
+  //
   // localhost do Back-End no Visual Studio 2022
    readonly baseURL = 'http://localhost:5000/api/CardDetail';
   formData: CardDetalhe = new CardDetalhe();
